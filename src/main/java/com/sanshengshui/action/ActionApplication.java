@@ -1,5 +1,6 @@
 package com.sanshengshui.action;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,14 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @SpringBootApplication
 public class ActionApplication {
+    @Autowired
+    private AuthorSettings authorSettings;
 
-	@Value("${book.author}")
-	private String bookAuthor;
-	@Value("${book.name}")
-	private String bookName;
 	@RequestMapping("/")
 	String index(){
-		return "book name is:"+bookName+" and book author is:" + bookAuthor;
+		return "book name is:"+authorSettings.getName()+" and book author is:" +authorSettings.getAge();
 	}
 	public static void main(String[] args) {
 		SpringApplication.run(ActionApplication.class, args);
