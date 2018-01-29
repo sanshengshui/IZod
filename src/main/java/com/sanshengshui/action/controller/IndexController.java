@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class IndexController {
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
-    @GetMapping("/index")
+    @GetMapping("/log")
     public Object index(){
         logger.debug("debug");
         logger.info("info");
