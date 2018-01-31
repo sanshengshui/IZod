@@ -1,4 +1,4 @@
-package com.sanshengshui.action;
+package com.sanshengshui.action.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
