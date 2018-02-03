@@ -12,7 +12,7 @@ import java.util.List;
  * @date 2018年2月2日 下午17:08
  * @description 数据访问接口
  */
-public interface PeopleRepository extends JpaRepository<People,Long>{
+public interface PeopleRepository extends CustomRepository<People,Long>{
     List<People> findByAddress(String name);
 
     People findByNameAndAddress(String name,String address);
