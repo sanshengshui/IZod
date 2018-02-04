@@ -11,7 +11,7 @@ import javax.persistence.Table;
  * @date 2018年2月4日 下午13:18
  */
 @Entity
-@Table(name = "PEOPLE")
+@Table(name = "people")
 public class Computer {
     @Id
     @GeneratedValue
