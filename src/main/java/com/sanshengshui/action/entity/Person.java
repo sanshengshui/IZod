@@ -13,7 +13,7 @@ public class Person {
      */
 
 
-    @Size(max = 6,min = 2)
+    @Size(max = 4,min = 2)
     private String name;
 
 
