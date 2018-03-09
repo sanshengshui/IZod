@@ -47,6 +47,10 @@ public class CsvBatchConfig {
          */
         FlatFileItemReader<Person> reader = new FlatFileItemReader<Person>();
         /**
+         * 从CSV读取中文数据乱码需要设置此项
+         */
+        reader.setEncoding("GBK");
+        /**
          * 使用FlatFileItemReader的setResource方法设置csv文件的路径
          */
         reader.setResource(new ClassPathResource("people.csv"));
