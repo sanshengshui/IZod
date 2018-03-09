@@ -11,8 +11,11 @@ public class Person {
     /**
      * 此处使用JSR-303注解来效验数据
      */
-    @Size(max = 4,min = 2)
+
+
+    @Size(max = 6,min = 2)
     private String name;
+
 
     private Integer age;
 
